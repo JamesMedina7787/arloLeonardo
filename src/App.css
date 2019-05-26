@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: oldlace
 }
 
 .App-logo {
@@ -24,10 +25,60 @@
 }
 
 .foldOver{
-  display:inline-flex;
+  flex: 1;
   width: 20%;
   background-color: black;
-  color:white
+  color:white;
+}
+
+.foldOverContainer{
+  display:inline-flex;
+  width: 100%;
+  list-style-type: none;
+
+}
+
+.blogContainer{
+  background-color: black;
+  font-family:wing-dings;
+
+
+}
+
+.blog{
+  animation: 200ms ease-in 1 normal running forwards dropDown;
+  color: white;
+  padding: 3em;
+  font-weight: bold;
+  transform-origin: top;
+}
+
+.linksContainer{
+  animation: 200ms ease-in 1 normal running forwards dropDown;
+transform-origin: top;
+  padding: 1em;
+  display: flex;
+  background-color: black;
+  justify-content: space-around;
+  align-items: stretch;
+
+}
+
+.linkStyle{
+
+  background-color: black;
+  width:200px;
+  height:200px
+}
+.NiyamaContainer{
+  font-family:wing-dings;
+color:white;
+
+}
+
+.Niyama{
+padding:3em;
+margin:1em
 }
 
 @keyframes App-logo-spin {
@@ -36,5 +87,14 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes dropDown {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
   }
 }
